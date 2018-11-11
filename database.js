@@ -338,12 +338,6 @@ function updateUser(req, res) {
 }
 
 
-
-
-
-
-
-
 module.exports = {
     getAllProducts,
     getProductByID,
