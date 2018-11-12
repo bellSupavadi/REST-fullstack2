@@ -286,7 +286,7 @@ function getUserByID(req, res) {
 }
 function insertUser(req, res) {
     db.any('insert into users(user_id,email,password,details,created_at)' +
-        'values(${user_id}, ${email}, ${password}, ${details}, ${created_at}',
+        'values(${user_id}, ${email}, ${password}, ${details}, ${created_at})',
         req.body)
         .then(function (data) {
             res.status(200)
