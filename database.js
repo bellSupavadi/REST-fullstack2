@@ -201,7 +201,7 @@ function getPurchaseByID(req, res) {
 }
 function insertPurchase(req, res) {
     db.any('insert into purchases(purchase_id,created_at,name,address,state,zipcode,user_id)' +
-        'values(${purchase_id}, ${created_at}, ${name}, ${address}, ${status}, ${state},${zipcode},${user_id})',
+        'values(${purchase_id}, ${created_at}, ${name}, ${address}, ${state},${zipcode},${user_id})',
         req.body)
         .then(function (data) {
             res.status(200)
@@ -279,8 +279,6 @@ function getUserByID(req, res) {
                 });
         })
         .catch(function (error) {
-            res.status(500)
-                .json({ status: "fail", message: "Mission Fail get back" })
             console.log('ERROR:', error)
         })
 }
