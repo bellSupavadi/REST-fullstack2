@@ -336,8 +336,6 @@ function updateUser(req, res) {
             console.log('ERROR:', error)
         })
 }
-
-
 module.exports = {
     getAllProducts,
     getProductByID,
